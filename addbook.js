@@ -38,7 +38,3 @@ function show() {
 
 
 button.addEventListener("click", show);
-
-
-
-
