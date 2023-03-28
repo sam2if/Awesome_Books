@@ -11,13 +11,11 @@ if (localStorage.getItem('bookList')) {
 }
 
 class Booklist {
-
     constructor(title, author, id) {
       this.title = title.value;
       this.author = author.value;
       this.id = Book.length;
     }
-   
   }
 
 function remove(b) {
