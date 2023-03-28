@@ -10,11 +10,15 @@ if (localStorage.getItem('bookList')) {
   updateBookList();
 }
 
-function Booklist(title, author, id) {
-  this.title = title.value;
-  this.author = author.value;
-  this.id = Book.length;
-}
+class Booklist {
+
+    constructor(title, author, id) {
+      this.title = title.value;
+      this.author = author.value;
+      this.id = Book.length;
+    }
+   
+  }
 
 function remove(b) {
   var filt = Book.filter((a, i) => {
