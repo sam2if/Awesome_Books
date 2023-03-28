@@ -45,12 +45,6 @@ function show() {
 
 button.addEventListener("click", show);
 
-window.addEventListener('storage', function(event) {
-  if (event.key === 'bookList') {
-    Book = JSON.parse(event.newValue);
-    updateBookList();
-  }
-});
 
 function updateBookList() {
   store.innerHTML = '';
