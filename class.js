@@ -16,12 +16,9 @@ class Booklist {
         Book.splice(i, 1);
         let rem = document.getElementById(`m${b}`);
         rem.remove();
-        return true;
       }
-      return false;
     });
     localStorage.setItem('bookList', JSON.stringify(Book));
-    return this;
   }
 
   show() {
@@ -34,7 +31,6 @@ class Booklist {
     titleInput.value = '';
     authorInput.value = '';
     localStorage.setItem('bookList', JSON.stringify(Book));
-    return this;
   }
 
   static count = 0;
@@ -48,7 +44,6 @@ class Booklist {
       node.innerHTML = `${Book[i].title} <br> ${Book[i].author} <br> <button onclick="book.remove(${Book[i].id})">Remove</button><hr><br>`;
       store.appendChild(node);
     }
-    return this;
   }
  
 }
@@ -60,5 +55,5 @@ if (localStorage.getItem('bookList')) {
   Booklist.updateBookList();
 }
 
-const book = new Booklist(title, author);
+const book = new Booklist();
 button.addEventListener("click", () => book.show());
