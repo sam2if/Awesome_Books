@@ -23,6 +23,11 @@ h1 {
   height: 100vh; 
 }
 
+.day {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .topic {
   border: 2px solid black;
   display: flex;
@@ -62,17 +67,22 @@ ul li {
   margin: 0.5em;
 }
 
-li:nth-child(odd) {
+#myList li:nth-child(odd) {
   background: rgb(230, 228, 228);
   padding: 0.5em;
 }
 
-li:nth-child(even) {
-  padding: 0.5em;
+#myList li:nth-child(even) {
+  padding: 0 0.5em;
+}
+
+.cont {
+  width: 50%;
+  margin: auto;
 }
 
 .remove {
-  height: 20px;
+  height: 30px;
   width: 6em;
   background: #fff;
   box-shadow: black;
